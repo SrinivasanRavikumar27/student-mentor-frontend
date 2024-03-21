@@ -10,7 +10,7 @@ function CreateMentor() {
   const [mentors, setMentors] = useState("");
   const [selectedMentor, setSelectedMentor] = useState("");
   const [selectedMentor1, setSelectedMentor1] = useState("");
-  const [selectedStudent, setSelectedStudent] = useState("");
+  const [selectedStudent, setSelectedStudent] = useState([]);
   const [mentorStudents, setMentorStudents] = useState("");
 
   const fetchData = async () => {
@@ -86,7 +86,7 @@ function CreateMentor() {
 
     if (response.status === 200) {
       setSelectedMentor("");
-      setSelectedStudent("");
+      setSelectedStudent([]);
 
       alert("Assigned students successfully!");
     }
